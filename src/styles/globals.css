@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom glowing button */
+.btn-glow {
+  @apply relative inline-block px-6 py-3 font-semibold rounded-lg text-white transition-all;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 2px;
+  background: linear-gradient(45deg, #00E5FF, #FF00FF, #39FF14);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.btn-glow:hover::before {
+  filter: blur(4px);
+}
+
+/* Smooth gradient background */
+.bg-hero {
+  background: linear-gradient(135deg, #0D0D0D, #1a1a1a, #000);
+}

@@ -1,0 +1,46 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0D0D0D, #1A1A1A);
+  color: #ffffff;
+  text-align: center;
+  gap: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.error-title {
+  font-size: 10rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #00E5FF;
+  text-shadow: 0 0 10px #00E5FF, 0 0 20px #00E5FF;
+}
+
+.error-text {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #ccc;
+}
+
+.error-button {
+  padding: 12px 24px;
+  background: #39FF14;
+  color: #0D0D0D;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.error-button:hover {
+  background: #00E5FF;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
